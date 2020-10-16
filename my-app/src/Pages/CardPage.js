@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, {css} from 'styled-components'
-import Header from './Header/Header';
+import Header from '../Components/Header/Header'
 
 // const Btn = styled.button`
 //     padding: 14px 22px 12px;
@@ -20,6 +20,7 @@ const CardPage = () => {
     return (
         <>
         <Header/>
+        
         </>
     )
 }

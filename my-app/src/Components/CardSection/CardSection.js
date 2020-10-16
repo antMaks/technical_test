@@ -5,7 +5,6 @@ import Card from '../Card/Card';
 const CardContainer = styled.section`
 width: 100%;
 height: auto;
-min-height: 100vh;
 margin: 0 auto;
 border: 1px solid black;
 padding: 84px 17px;
@@ -13,18 +12,19 @@ display: -webkit-box;
 display: -webkit-flex;
 display: -ms-flexbox;
 display: flex;
-justify-content: center
+justify-content: center;
+padding: 55px calc(50% - 585px);
 `
 
 
-const CardSection = () => {
+const CardSection = (props) => {
+    console.log(props);
     return (
         <>
            <CardContainer>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+           { props.things.map((thing) => {
+               return <Card thing={thing} key={thing.id}/>
+           }) }
 
            </CardContainer>
         </>

@@ -3,7 +3,9 @@ import styled, {css} from 'styled-components'
 import Button from '../Button/Button';
 
 import {
-
+    Route,
+    Router,
+    BrowserRouter,
     Link
   } from "react-router-dom";
 
@@ -15,14 +17,19 @@ const HeaderContainer = styled.header`
     display:flex;
     justify-content: end;
     border: 1px solid black;
-    margin: 34px 0px;
 `
 
 const Header = () => {
     return (
         
         <HeaderContainer>
-        <Button><Link to="/CardSection">Cart</Link></Button>
+         <BrowserRouter>
+        <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/CardPage">Cart</Link></li>
+        </ul>
+        </BrowserRouter>
+       
         </HeaderContainer>
        
        

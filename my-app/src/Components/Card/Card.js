@@ -15,18 +15,24 @@ const HeaderCard = styled.div`
 width: 100%;
 max-width: 300px;
 border: 1px solid black;
-margin: 17px 0;
+
 `
 
 const BtnBuy = styled.button`
-    color:red;
-    padding: 23px 125px;
+color: red;
+cursor: pointer;
+width: 100%;
+padding: 20px;
+
+&:hover {
+        opacity: .4;
+}
 `
 
 const Title = styled.p`
-    font-size:16px;
-    color:black;
-    text-align:center;
+font-size:16px;
+color:black;
+text-align:center;
 `
 
 const MainCard = styled.div`
@@ -60,31 +66,28 @@ padding: 15px;
 
  
 
-const Card = () => {
+const Card = ({thing}) => {
+
+   
     return (
         <>
         <ContainerCard>
         <HeaderCard>
-            <Title>hello</Title>
+            <Title>{thing.title}</Title>
             </HeaderCard>
             <MainCard>
             <PargraphDiv>
+                
+                    
                 <Paragraph>
-                    hello i tell you about o
-                    ur live that life beuti
-                    fu adskdjhakshdakjdak
-                    jsdhajkshdkajsh
-                    dkajshdkajshdkajshdkajsh
-                    dkajshdKSAFH
-                    GSADKHSKDFHSKDFHSALKDFH
-                    SKDlsdasdasd
-                    sadasdasd
-                    asdaldalsdkals 
+                    {thing.text}
                     </Paragraph>
+                
                     </PargraphDiv >
             </MainCard>
             <FooterCard>
-           
+           <span style={{textAlign:"center", width:"100%", display:"block", padding: "12px 0 15px 6px"
+}}>Price:{thing.price}</span>
             <BtnBuy>Buy</BtnBuy>
 
             </FooterCard>
